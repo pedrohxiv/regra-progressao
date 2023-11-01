@@ -20,15 +20,22 @@ public class App {
     int[] weights = new int[quantityActivities];
     int[] grades = new int[quantityActivities];
 
+    int sumWeights = 0;
+
     for (int i = 0; i < quantityActivities; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
       names[i] = input.nextLine();
 
       System.out.println("Digite o peso da atividade " + (i + 1) + ":");
       weights[i] = Integer.parseInt(input.nextLine());
+      sumWeights += weights[i];
 
       System.out.println("Digite a nota obtida para " + names[i] + ":");
       grades[i] = Integer.parseInt(input.nextLine());
+    }
+
+    if (sumWeights != 100) {
+      System.out.println("A soma dos pesos é diferente de 100!");
     }
 
     input.close();
