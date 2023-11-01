@@ -18,6 +18,7 @@ public class App {
 
     String[] names = new String[quantityActivities];
     int[] weights = new int[quantityActivities];
+    int[] grades = new int[quantityActivities];
 
     for (int i = 0; i < quantityActivities; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
@@ -25,6 +26,9 @@ public class App {
 
       System.out.println("Digite o peso da atividade " + (i + 1) + ":");
       weights[i] = Integer.parseInt(input.nextLine());
+
+      System.out.println("Digite a nota obtida para " + names[i] + ":");
+      grades[i] = Integer.parseInt(input.nextLine());
     }
 
     input.close();
